@@ -149,7 +149,7 @@
             }
         };
 
-        const winSound = new Audio('select-sound-121244.mp3');
+        const winSound = new Audio('game-bonus-144751.mp3');
 
         const showWinner = (winner) => {
             msg.innerText = `Congratulations, Winner is ${winner}`;
@@ -172,10 +172,11 @@
                     return;
                 }
             }
-
+            const drawSound = new Audio('game-bonus-144751.mp3');
             if (!hasWin) {
                 const allBoxes = [...boxes].every((box) => box.innerText !== "");
                 if (allBoxes) {
+                    drawSound.play();
                     msgContainer.classList.remove('hide');
                     msg.innerText = 'Match Drawn';
                 }
