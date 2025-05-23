@@ -114,18 +114,21 @@
             [3, 4, 5],
             [6, 7, 8]
         ];
+        const audio = new Audio('select-sound-121244.mp3');
 
         boxes.forEach((box) => {
             box.addEventListener('click', function () {
                 if (turnO) {
                     box.innerText = 'O';
                     box.style.color = 'white';
+                    audio.play();
                     turnO = false;
                     box.disabled = true;
                     checkWinner();
                 } else {
                     box.innerText = 'X';
                     box.style.color = 'black';
+                    audio.play();
                     turnO = true;
                     box.disabled = true;
                     checkWinner();
