@@ -149,9 +149,12 @@
             }
         };
 
+        const winSound = new Audio('select-sound-121244.mp3');
+
         const showWinner = (winner) => {
             msg.innerText = `Congratulations, Winner is ${winner}`;
             msgContainer.classList.remove('hide');
+            winSound.play();
             disableBoxes();
         };
 
